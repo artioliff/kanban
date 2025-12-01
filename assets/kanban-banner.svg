@@ -1,0 +1,175 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.45" stop-color="#020617"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#020617" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+
+  <!-- Grid sutil -->
+  <g opacity="0.18">
+    <path d="M80 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M180 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M280 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M380 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M480 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M580 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M680 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M780 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M880 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M980 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M1080 40V600" stroke="#1e293b" stroke-width="1"/>
+    <path d="M1180 40V600" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- Marca Artioli -->
+  <g transform="translate(96,120)">
+    <rect x="0" y="0" width="56" height="56" rx="18" fill="url(#accentGrad)"/>
+    <text x="28" y="36" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="700">
+      A
+    </text>
+    <text x="72" y="22" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="600">
+      Artioli Kanban Board
+    </text>
+    <text x="72" y="44" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">
+      Kanban premium em HTML, CSS e JavaScript
+    </text>
+  </g>
+
+  <!-- Tag destaque -->
+  <rect x="96" y="190" rx="999" width="210" height="28" fill="#020617" stroke="#1f2937" stroke-width="1"/>
+  <text x="112" y="209" fill="#9ca3af" font-family="system-ui, -apple-system" font-size="12">
+    🌗 Dark &amp; Light · Drag &amp; Drop · LocalStorage
+  </text>
+
+  <!-- Cartão “preview” Kanban à direita -->
+  <g transform="translate(540,90)" filter="url(#shadow)">
+    <rect x="0" y="0" width="620" height="460" rx="26" fill="#020617" stroke="#1f2937" stroke-width="1.2"/>
+
+    <!-- Topbar -->
+    <g transform="translate(24,24)">
+      <rect x="0" y="0" width="140" height="28" rx="999" fill="#020617" stroke="#1f2937"/>
+      <circle cx="18" cy="14" r="6" fill="#22c55e"/>
+      <text x="34" y="18" fill="#e5e7eb" font-family="system-ui" font-size="12">Kanban Board</text>
+
+      <rect x="420" y="0" width="70" height="24" rx="999" fill="#020617" stroke="#1f2937"/>
+      <text x="435" y="17" fill="#9ca3af" font-family="system-ui" font-size="11">Dark</text>
+
+      <rect x="496" y="0" width="70" height="24" rx="999" fill="#111827" stroke="#4b5563"/>
+      <text x="511" y="17" fill="#e5e7eb" font-family="system-ui" font-size="11">Light</text>
+    </g>
+
+    <!-- 3 colunas -->
+    <g transform="translate(24,74)">
+      <!-- Backlog -->
+      <g>
+        <rect x="0" y="0" width="180" height="340" rx="18" fill="#020617" stroke="#1f2937"/>
+        <g transform="translate(14,16)">
+          <circle cx="6" cy="8" r="4" fill="#0ea5e9"/>
+          <text x="16" y="12" fill="#e5e7eb" font-family="system-ui" font-size="12">Backlog</text>
+          <rect x="132" y="-2" width="32" height="18" rx="999" fill="#020617" stroke="#1f2937"/>
+          <text x="148" y="11" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="10">3</text>
+        </g>
+
+        <!-- Cards -->
+        <g transform="translate(14,48)">
+          <rect x="0" y="0" width="152" height="82" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+          <rect x="8" y="10" width="42" height="16" rx="999" fill="#0f172a" stroke="#1d4ed8"/>
+          <text x="14" y="22" fill="#bfdbfe" font-family="system-ui" font-size="10">Dev</text>
+          <rect x="94" y="10" width="50" height="16" rx="999" fill="none" stroke="#f97373"/>
+          <text x="99" y="22" fill="#fecaca" font-family="system-ui" font-size="10">Alta</text>
+          <text x="8" y="40" fill="#e5e7eb" font-family="system-ui" font-size="11">
+            Estrutura inicial
+          </text>
+          <text x="8" y="56" fill="#9ca3af" font-family="system-ui" font-size="9">
+            Montar layout e colunas.
+          </text>
+        </g>
+
+        <g transform="translate(14,148)">
+          <rect x="0" y="0" width="152" height="82" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+          <rect x="8" y="10" width="46" height="16" rx="999" fill="#0f172a" stroke="#eab308"/>
+          <text x="14" y="22" fill="#facc15" font-family="system-ui" font-size="10">Idea</text>
+          <rect x="90" y="10" width="54" height="16" rx="999" fill="none" stroke="#fb923c"/>
+          <text x="95" y="22" fill="#fed7aa" font-family="system-ui" font-size="10">Média</text>
+          <text x="8" y="40" fill="#e5e7eb" font-family="system-ui" font-size="11">
+            Estados da tarefa
+          </text>
+          <text x="8" y="56" fill="#9ca3af" font-family="system-ui" font-size="9">
+            Definir modelo de dados.
+          </text>
+        </g>
+      </g>
+
+      <!-- Doing -->
+      <g transform="translate(210,0)">
+        <rect x="0" y="0" width="180" height="340" rx="18" fill="#020617" stroke="#1f2937"/>
+        <g transform="translate(14,16)">
+          <circle cx="6" cy="8" r="4" fill="#f97316"/>
+          <text x="16" y="12" fill="#e5e7eb" font-family="system-ui" font-size="12">Em Progresso</text>
+          <rect x="120" y="-2" width="44" height="18" rx="999" fill="#020617" stroke="#1f2937"/>
+          <text x="142" y="11" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="10">2</text>
+        </g>
+
+        <g transform="translate(14,48)">
+          <rect x="0" y="0" width="152" height="82" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+          <rect x="8" y="10" width="42" height="16" rx="999" fill="#0f172a" stroke="#1d4ed8"/>
+          <text x="14" y="22" fill="#bfdbfe" font-family="system-ui" font-size="10">Dev</text>
+          <rect x="94" y="10" width="50" height="16" rx="999" fill="none" stroke="#f97373"/>
+          <text x="99" y="22" fill="#fecaca" font-family="system-ui" font-size="10">Alta</text>
+          <text x="8" y="40" fill="#e5e7eb" font-family="system-ui" font-size="11">
+            Drag &amp; Drop
+          </text>
+          <text x="8" y="56" fill="#9ca3af" font-family="system-ui" font-size="9">
+            Mover cards entre colunas.
+          </text>
+        </g>
+      </g>
+
+      <!-- Done -->
+      <g transform="translate(420,0)">
+        <rect x="0" y="0" width="180" height="340" rx="18" fill="#020617" stroke="#1f2937"/>
+        <g transform="translate(14,16)">
+          <circle cx="6" cy="8" r="4" fill="#22c55e"/>
+          <text x="16" y="12" fill="#e5e7eb" font-family="system-ui" font-size="12">Concluído</text>
+          <rect x="120" y="-2" width="44" height="18" rx="999" fill="#020617" stroke="#1f2937"/>
+          <text x="142" y="11" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="10">1</text>
+        </g>
+
+        <g transform="translate(14,48)">
+          <rect x="0" y="0" width="152" height="82" rx="12" fill="url(#cardGrad)" stroke="#334155"/>
+          <rect x="8" y="10" width="42" height="16" rx="999" fill="#0f172a" stroke="#1d4ed8"/>
+          <text x="14" y="22" fill="#bfdbfe" font-family="system-ui" font-size="10">Dev</text>
+          <rect x="94" y="10" width="50" height="16" rx="999" fill="none" stroke="#22c55e"/>
+          <text x="99" y="22" fill="#bbf7d0" font-family="system-ui" font-size="10">Baixa</text>
+          <text x="8" y="40" fill="#e5e7eb" font-family="system-ui" font-size="11">
+            Layout &amp; Cores
+          </text>
+          <text x="8" y="56" fill="#9ca3af" font-family="system-ui" font-size="9">
+            Tema dark minimalista pronto.
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Texto final -->
+  <text x="96" y="520" fill="#6b7280" font-family="system-ui" font-size="13">
+    Projeto de portfólio • Front-End • HTML · CSS · JavaScript · LocalStorage
+  </text>
+</svg>

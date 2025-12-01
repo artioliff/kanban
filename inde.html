@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artioli Kanban Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tema (por enquanto só dark) -->
+  <link id="themeStylesheet" rel="stylesheet" href="css/kanban-dark.css" />
+
+</head>
+<body>
+
+  <div class="kanban-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">
+          <span class="logo-name">Artioli</span>
+          <span class="logo-sub">Kanban</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active">Quadro Principal</button>
+        <button class="nav-item">Pessoal</button>
+        <button class="nav-item">Trabalho</button>
+        <button class="nav-item">Estudos</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p class="small-muted">v0.1 — layout estático</p>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+          <div>
+            <h1 class="page-title">Kanban Board</h1>
+            <p class="page-subtitle">Organize suas tarefas em colunas visuais.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="filters">
+            <select class="filter-select" id="filterTag">
+              <option value="all">Todas as tags</option>
+              <option value="dev">Dev</option>
+              <option value="bug">Bug</option>
+              <option value="idea">Idea</option>
+            </select>
+
+            <select class="filter-select" id="filterPriority">
+              <option value="all">Todas as prioridades</option>
+              <option value="high">Alta</option>
+              <option value="medium">Média</option>
+              <option value="low">Baixa</option>
+            </select>
+          </div>
+
+          <div class="theme-toggle">
+            <button class="theme-btn" data-theme="dark">Dark</button>
+            <button class="theme-btn" data-theme="light">Light</button>
+          </div>
+
+          <button class="add-task-btn">+ Nova tarefa</button>
+        </div>
+      </header>
+
+      <!-- BOARD -->
+      <section class="board" id="board">
+        <!-- COLUNA 1 -->
+        <article class="column">
+          <header class="column-header">
+            <span class="column-dot backlog"></span>
+            <h2 class="column-title">Backlog</h2>
+            <span class="column-count">3</span>
+          </header>
+
+          <div class="column-body">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-dev">Dev</span>
+                <span class="card-priority high">Alta</span>
+              </div>
+              <h3 class="card-title">Criar estrutura inicial do Kanban</h3>
+              <p class="card-description">
+                Montar HTML e CSS base com 3 colunas e layout responsivo.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#1 • Hoje</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-idea">Idea</span>
+                <span class="card-priority medium">Média</span>
+              </div>
+              <h3 class="card-title">Planejar estados da tarefa</h3>
+              <p class="card-description">
+                Definir estrutura de dados para armazenar tarefas e colunas.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#2 • Amanhã</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-bug">Bug</span>
+                <span class="card-priority low">Baixa</span>
+              </div>
+              <h3 class="card-title">Ajustar responsividade mobile</h3>
+              <p class="card-description">
+                Melhorar visual em telas menores e animações de hover.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#3 • Esta semana</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- COLUNA 2 -->
+        <article class="column">
+          <header class="column-header">
+            <span class="column-dot doing"></span>
+            <h2 class="column-title">Em Progresso</h2>
+            <span class="column-count">2</span>
+          </header>
+
+          <div class="column-body">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-dev">Dev</span>
+                <span class="card-priority high">Alta</span>
+              </div>
+              <h3 class="card-title">Implementar drag & drop</h3>
+              <p class="card-description">
+                Permitir mover cards entre colunas com HTML5 Drag & Drop.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#4 • Em andamento</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-dev">Dev</span>
+                <span class="card-priority medium">Média</span>
+              </div>
+              <h3 class="card-title">Criar modal de edição</h3>
+              <p class="card-description">
+                Modal para editar título, descrição, tag e prioridade.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#5 • Em andamento</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- COLUNA 3 -->
+        <article class="column">
+          <header class="column-header">
+            <span class="column-dot done"></span>
+            <h2 class="column-title">Concluído</h2>
+            <span class="column-count">1</span>
+          </header>
+
+          <div class="column-body">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-tag tag-dev">Dev</span>
+                <span class="card-priority low">Baixa</span>
+              </div>
+              <h3 class="card-title">Definir layout e paleta de cores</h3>
+              <p class="card-description">
+                Inspirar no Notion/Trello com tema dark minimalista.
+              </p>
+              <div class="card-footer">
+                <span class="card-meta">#6 • Ontem</span>
+                <span class="card-assignee">AR</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+            <!-- MODAL DE TAREFA -->
+      <div class="modal-backdrop" id="taskModalBackdrop">
+        <div class="modal" id="taskModal">
+          <header class="modal-header">
+            <h2 id="taskModalTitle">Nova tarefa</h2>
+          </header>
+
+          <form class="modal-form" id="taskForm">
+            <label>
+              Título
+              <input type="text" id="taskTitle" required />
+            </label>
+
+            <label>
+              Descrição
+              <textarea id="taskDescription" rows="3" placeholder="Detalhes da tarefa..."></textarea>
+            </label>
+
+            <div class="modal-row">
+              <label>
+                Tag
+                <select id="taskTag">
+                  <option value="dev">Dev</option>
+                  <option value="bug">Bug</option>
+                  <option value="idea">Idea</option>
+                </select>
+              </label>
+
+              <label>
+                Prioridade
+                <select id="taskPriority">
+                  <option value="high">Alta</option>
+                  <option value="medium">Média</option>
+                  <option value="low">Baixa</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Coluna
+              <select id="taskColumn">
+                <!-- preenchido via JS -->
+              </select>
+            </label>
+
+            <div class="modal-footer">
+              <button type="button" class="btn-secondary" id="cancelTaskBtn">
+                Cancelar
+              </button>
+              <button type="submit" class="btn-primary">
+                Salvar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JS (no futuro vamos usar módulos) -->
+  <script src="js/theme.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
